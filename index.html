@@ -1,0 +1,55 @@
+<script type = "text/javascript" >
+	//if you are reading this you are gay
+	//"DONT GIVE THEM PVP" -KICKASS
+	//In 8 months of snake being released East has lost more snakes to west than theyve killed
+    var date1 = new Date("04/15/2021");
+	var date2 = new Date();
+
+	var Difference_In_Time = date2.getTime() - date1.getTime();
+
+	var Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('dylsulol.png');
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  opacity: 0.90;
+}
+</style>
+</head>
+<body>
+
+<div class="center">
+	<h1>How many days since Dylsu rasied east castle tax to 30% to "regrade tank parts to kill Snake"</h1>
+	<script>
+	function doDate(){
+		var finaldate = new Date(null);
+		var date1 = new Date(); // current date
+		var date2 = new Date("04/7/2021"); // mm/dd/yyyy format
+		var timeDiff = Math.abs(date2.getTime() - date1.getTime()); // in miliseconds
+		var secs = Math.ceil(timeDiff / 1000);
+		var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+		finaldate.setSeconds(secs);
+		var result = finaldate.toISOString().substr(11,8);
+
+		document.getElementById("time").innerHTML = days + ":" + result;
+	}
+
+	setInterval(doDate, 1000);	
+	</script>
+	<h1 id="time"></h1>
+</div
+
+</body>
+</html>
