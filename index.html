@@ -26,6 +26,11 @@ body {
   background-color: #FFFFFF;
   opacity: 0.90;
 }
+
+.tdcenter{
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 </head>
 <body>
@@ -33,7 +38,7 @@ body {
 <div class="center">
 	<h1>How many days since Dylsu rasied east castle tax to 30% to "regrade tank parts to kill Snake"</h1>
 	<script>
-	function doDate(){
+	function sinceTax(){
 		var finaldate = new Date(null);
 		var date1 = new Date(); // current date
 		var date2 = new Date("04/7/2021"); // mm/dd/yyyy format
@@ -46,9 +51,50 @@ body {
 		document.getElementById("time").innerHTML = days + ":" + result;
 	}
 
-	setInterval(doDate, 1000);	
+	setInterval(sinceTax, 1000);	
+	</script>
+	
+	<script>
+	function sinceSnake(){
+		var finaldate = new Date(null);
+		var date1 = new Date(); // current date
+		var date2 = new Date("11/11/2020"); // mm/dd/yyyy format
+		var timeDiff = Math.abs(date2.getTime() - date1.getTime()); // in miliseconds
+		var secs = Math.ceil(timeDiff / 1000);
+		var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+		finaldate.setSeconds(secs);
+		var result = finaldate.toISOString().substr(11,8);
+
+		var beetleCount = Math.floor((days/7)*4);
+
+		document.getElementById("snake").innerHTML = days + ":" + result;
+		document.getElementById("beetles").innerHTML = beetleCount;
+	}
+
+	setInterval(sinceSnake, 1000);	
 	</script>
 	<h1 id="time"></h1>
+	<table class="tdcenter">
+		<h1>SCOREBOARD</h1>
+		<tbody>
+		<tr>
+			<td><h3>Days since Snake release:</h3></td>
+			<td><h3 id="snake"></h3></td>
+		</tr>
+		<tr>
+			<td><h3>Aria east kill count:</h3></td>
+			<td><h3>💩💩2💩💩</h3></td>
+		</tr>
+		<tr>
+			<td><h3>Aria east snakes lost to aria west:</h3></td>
+			<td><h3>like all of them LOL</h3></td>
+		</tr>
+		<tr>
+			<td><h3>Aria east peace beetle count:</h3></td>
+			<td><h3 id="beetles"></h3></td>
+		</tr>
+		</tbody>
+		</table>
 </div
 
 </body>
